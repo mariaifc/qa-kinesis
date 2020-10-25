@@ -7,7 +7,7 @@ Feature: Route endpoint
     And a message is sent to "li-stream-odd" stream
     But a message is not sent to "li-stream-even" stream
 
-  Scenario: When routing seed as zero a message is sent to li-stream-odd stream
+  Scenario: When routing seed as zero a message is sent to li-stream-even stream
     When I send a GET request to "route/0"
     Then The response status code should be 200
     And The response header should contain "X-Transaction-Id"
